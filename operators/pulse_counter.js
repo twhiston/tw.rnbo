@@ -41,7 +41,7 @@ class pulse_counter extends StatefulOperator
 			this.carry_flag = 0;
 		}
 		//Ignore negative signals
-		else if(a > 0) {
+		else if(a >= 0) {
 
 			var floored = (a > threshold) ? 1 : 0;
 
