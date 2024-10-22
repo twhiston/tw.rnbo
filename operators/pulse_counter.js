@@ -53,6 +53,7 @@ class pulse_counter extends StatefulOperator
 			this.last = floored;
 
 			if (limit != 0) {
+				//TODO if count is higher than limit (ie limit changed) wrap to the correct value
 				if ((a > 0 && this.count >= limit) || (a < 0 && this.count <= limit)) {
 					this.count = 0;
 					this.carry += 1;
