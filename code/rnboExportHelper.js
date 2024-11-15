@@ -16,13 +16,10 @@ function printPatchers(){
 			post()
 	}
 	post("===========================\n")
-
 }
 
 function exportNamed(){
-
 	getRnboPatchers();
-
 	const userArguments = arrayfromargs(arguments);
 	for(i = 0; i < userArguments.length; i++){
 		var objName = userArguments[i];
@@ -37,30 +34,22 @@ function exportNamed(){
 
 function bang() {
 	if(inlet == 0){
-    	getRnboPatchers();
-
-		post("Found the following RNBO patchers \n");
-		for(i = 0; i < rnboPatchers.length; i++){
-			post(rnboPatchers[i][0]);
-		}
+    	printPatchers();
 		post("\nStarting export\n");
 		triggerExport();
-
 	} else if(inlet == 1){
 		triggerExport();
 	}
-
 }
 
 function destroyAll(){
 	getRnboPatchers();
-
-	post("DESTROYING")
+	post("DESTROYING ALL");
 	for(i = 0; i < rnboPatchers.length; i++){
-			post(rnboPatchers[i].getattr("title"));
-			rnboRemote.message("patcherdestroy", rnboPatchers[i].getattr("title"));
+			post(rnboPatchers[i][0]);
+			rnboRemote.message("patcherdestroy", rnboPatchers[i][0]);
 	}
-	post("\n");
+	post();
 }
 
 function getRnboPatchers(){
