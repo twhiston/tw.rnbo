@@ -21,15 +21,18 @@ function printPatchers(){
 function exportNamed(){
 	getRnboPatchers();
 	const userArguments = arrayfromargs(arguments);
+	let filteredObjects = [];
 	for(i = 0; i < userArguments.length; i++){
 		var objName = userArguments[i];
 		var result = rnboPatchers.find(obj => {
   			return obj[0] === objName
 		})
 		if(result !== undefined){
-			sendExportMessage(result)
+			filteredObjects.push(result)
 		}
 	}
+	rnboPatchers = filteredObjects;
+	triggerExport();
 }
 
 function bang() {
@@ -69,7 +72,7 @@ function triggerExport(){
 triggerExport.local = 1;
 
 function sendExportMessage(obj){
-	post("exporting: "+obj[0]);
+	post("exporting: "+obj[0]+"\n");
 	obj[1].message("export", "oscquery-export", targetName);
 
 }

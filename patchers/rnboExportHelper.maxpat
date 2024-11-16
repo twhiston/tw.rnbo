@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 660.0, 240.0, 594.0, 780.0 ],
+		"rect" : [ 660.0, 240.0, 716.0, 780.0 ],
 		"openinpresentation" : 1,
 		"gridsize" : [ 15.0, 15.0 ],
 		"boxes" : [ 			{
@@ -24,17 +24,6 @@
 					"patching_rect" : [ 227.0, 33.0, 24.0, 24.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 334.0, 24.0, 24.0, 24.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-8",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 168.0, 477.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -400,16 +389,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-8", 1 ],
-					"order" : 1,
-					"source" : [ "obj-3", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-98", 0 ],
-					"order" : 0,
 					"source" : [ "obj-3", 0 ]
 				}
 
@@ -429,7 +409,7 @@
 
 			}
  ],
-		"originid" : "pat-663",
+		"originid" : "pat-633",
 		"dependency_cache" : [ 			{
 				"name" : "rnboExportHelper.js",
 				"bootpath" : "~/Documents/Max 9/Packages/tw.rnbo/code",
